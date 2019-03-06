@@ -1,0 +1,15 @@
+ECMAScript Assignment- 1 March 2019
+
+
+What is the difference between null and undefined ?
+-Undefined means a variable has been declared but has not been assigned a value. 
+               eg. var fruits; //undefined     
+               //this is undefined because a value has not been assigned to the variable called fruits.
+ 
+
+-Null indicates the absence of value. It can be assigned to a variable as a representation of no value.
+               eg. var fruits = null;  
+                   typeof fruits // 'object'
+                      //the variable fruits has no value.
+Therefore the difference between the two is that undefined is a type itself while null is the object.
+ 
