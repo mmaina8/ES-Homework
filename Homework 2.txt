@@ -1,0 +1,16 @@
+ECMAScript Assignment 2- 12 March 2019
+
+What is the difference between definition, declaration and initialization?
+-A declaration is when the variable is registered using a given name within the corresponding scope (inside a function).
+                        eg. var a;        // the variable a has been declared.
+
+
+-Initialization is when you declare a variable it is automatically initialized, which means memory is allocated for the variable by the JavaScript engine (the computer has stored it and will remember it).
+                        eg. var a = 'foo';  
+                           // the variable a has been assigned the value 'foo' and has been initialized so that the computer will remember it.
+
+
+-Definition is showing how something has been implemented like a function or a variable.
+                        eg. var a = 'foo';
+                                a
+                                foo     // the variable a has been defined by the assignment 'foo'.
