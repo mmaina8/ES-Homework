@@ -1,2 +1,2 @@
 # ES-Homework
-This is my ES homework
+This repository contains all my ES homework.
