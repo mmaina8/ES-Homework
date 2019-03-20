@@ -1,0 +1,31 @@
+ECMAScript Assignment- 19 March 2019
+
+
+1.Write a function that prints all the fruits from a given list of fruits e.g. printFruits(fruits_list).
+
+                         function printFruits (fruits_list) {
+
+                         fruits_list = ['apple','banana','mango','grapes']
+}
+
+                         //undefined
+
+
+
+2.Write a function that given a fruit index, it returns the name of a fruit from a list of fruits. e.g getFruit(1, fruits_list), returns 'apples'
+
+                         var fruits_list= ['apple','banana','mango','grapes'];
+
+                         //undefined
+
+
+                            console.log(fruits_list);                         VM660:1 
+
+
+                           (4) ["apple", "banana", "mango", "grapes"]
+                               0: "apple"
+                               1: "banana"
+                               2: "mango"
+                               3: "grapes"
+                               length: 4
+                               __proto__: Array(0)
