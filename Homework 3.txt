@@ -19,13 +19,16 @@ ECMAScript Assignment- 19 March 2019
                          //undefined
 
 
-                            console.log(fruits_list);                         VM660:1 
+                         console.log(fruits_list);                         VM660:1 
 
 
-                           (4) ["apple", "banana", "mango", "grapes"]
-                               0: "apple"
-                               1: "banana"
+                         (4) ["apple", "banana", "mango", "grapes"]         or          fruits_list [0]; "apple"
+                                                                                        fruits_list [1]; "banana"
+                               0: "apple"                                               fruits_list [2]; "mango"                                           
+                               1: "banana"                                              fruits_list [3]; "grapes"   
                                2: "mango"
                                3: "grapes"
                                length: 4
                                __proto__: Array(0)
+                       
+                               
