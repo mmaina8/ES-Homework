@@ -1,0 +1,35 @@
+ECMAScript Assignment 2- 28 March 2019
+
+1.Write a program to calculate purchases from a kiosk. For e.g. given the fruit name 'orange' the program should fetch its price (30.00) 
+and multiply with the quantity requested (2) and return total cost in this printed format (2 Oranges for KES 60.00). 
+
+calculateFruitCost(fruitName, quantity)
+
+For example, calculateFruitCost('orange', 2) should return "2 Oranges for KES 60.00"
+
+........................................................................................................................................
+
+	fruits = {'apples':20, 'passion':10, 'oranges':30,'peaches':30};
+	var quantity= 2
+	fruits['oranges']*quantity
+		//60
+
+	quantity + ' oranges' + ' for KES ' + fruits['oranges']*2
+
+		//"2 oranges for KES 60"
+
+	function calculateFruitCost (fruit_specific,qtty){
+
+	fruits = {'apples':20, 'passion':10, 'oranges':30,'peaches':30};
+
+	var price= fruits[fruit_specific]*qtty;
+
+	console.log(quantity + ' ' + fruit_specific + ' for KES ' + price);
+
+	}
+
+		//undefined
+
+	calculateFruitCost ('oranges', 2);                                           
+VM2030:4
+ 		2 oranges for KES 60
