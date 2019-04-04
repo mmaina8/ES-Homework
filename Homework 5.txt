@@ -1,0 +1,52 @@
+ECMAScript Assignment 2- 4 April 2019.
+
+1.Write a program to determine the grade of a student as below:
+80 and above -> A
+70 - 79 -> B
+60 - 69 -> C
+50 - 59 -> D
+0 - 40 -> E
+Anything else -> F
+Your program should contain a function getGrade() that requires marks as a parameter i.e.
+getGrade(marks) e.g. 
+var marks = 84;
+getGrade(marks) returns "A" 
+
+
+............................................................................................................
+
+
+      grades  = {'80 and above':'A', '70-79':'B', '60-69':'C', '50-59':'D', '0-40':'D', 'Anything else':'F'}
+      var marks= 84;
+        //undefined
+      
+
+      function getGrade () {
+
+
+      grades  = {'80 and above':'A', '70-79':'B', '60-69':'C', '50-59':'D', '0-40':'D', 'Anything else':'F'}
+
+      switch (grades) {
+    
+      case marks:
+		
+      console.log ('84');
+		
+      break;
+    
+      case grades:
+		
+      console.log ('A');
+		
+      break;
+    
+      default:
+		
+      console.log ('84 A');
+}
+}
+         //undefined
+
+      getGrade (84);
+      A
+         //undefined
