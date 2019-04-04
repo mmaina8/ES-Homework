@@ -16,7 +16,7 @@ getGrade(marks) returns "A"
 ............................................................................................................
 
 
-      grades  = {'80 and above':'A', '70-79':'B', '60-69':'C', '50-59':'D', '0-40':'D', 'Anything else':'F'}
+      grades  = {'80 and above':'A', '70-79':'B', '60-69':'C', '50-59':'D', '0-49':'D', 'Anything else':'F'}
       var marks= 84;
         //undefined
       
@@ -24,25 +24,43 @@ getGrade(marks) returns "A"
       function getGrade () {
 
 
-      grades  = {'80 and above':'A', '70-79':'B', '60-69':'C', '50-59':'D', '0-40':'D', 'Anything else':'F'}
+      grades  = {'80 and above':'A', '70-79':'B', '60-69':'C', '50-59':'D', '0-49':'D', 'Anything else':'F'}
 
       switch (grades) {
     
-      case marks:
-		
-      console.log ('84');
-		
-      break;
-    
-      case grades:
+      case ('80 and above'):
 		
       console.log ('A');
 		
       break;
     
+      case (70,79):
+		
+      console.log ('B');
+		
+      break;
+      
+      case (60,69):
+      
+      console.log ('C');
+      
+      break;
+      
+      case (50,59):
+      
+      console.log ('D');
+      
+      break;
+      
+      case (0,49):
+      
+      console.log ('E');
+      
+      break;
+    
       default:
 		
-      console.log ('84 A');
+      console.log ('F');
 }
 }
          //undefined
