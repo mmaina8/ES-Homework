@@ -1,0 +1,45 @@
+ECMAScript Assignment 6- 12 April 2019.
+
+1.Write a program Kiosk( ) that will allow you to add a fruit and retrieve a list of fruits to/from a kiosk 
+using setter and getter methods.
+For instance: 
+var kiosk = Kiosk( )
+kiosk.setFruit(“mango”)
+kiosk.getFruits() will return a list of fruits  [“mango”]  
+
+............................................................................................................
+
+
+function Kiosk () {
+
+	var fruits = ['mango','banana','apple']
+
+
+function setFruit (fruit) {return 'mango'}
+
+function getFruits (fruitslist) {return 'mango','banana','apple'}
+
+var fruits = {
+	
+	setFruit : setFruit,
+	
+	getFruits : getFruits
+
+}
+
+return fruits; 
+}
+
+   //undefined
+
+
+Kiosk.setFruit = 'mango'
+
+"mango"
+Kiosk.getFruits = ['mango','banana','apple']
+(3) ["mango", "banana", "apple"]
+0: "mango"
+1: "banana"
+2: "apple"
+length: 3
+__proto__: Array(0)
