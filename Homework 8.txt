@@ -1,0 +1,57 @@
+ECMAScript Assignment 8- 30 April 2019.
+
+1.Assume we have an object
+
+let user = {
+ name: "Jane Doe",
+ years: 20
+};
+Write the destructing assignment that reads:
+
+-name property into the variable name
+
+-years property into the variable age
+
+-isStudent property into the variable isStudent (false if absent)
+
+.........................................................................................................
+
+
+
+let user = {name:'Joy Wahome', years:21};
+let {name:name, years:age, isStudent:isStudent} = user;
+console.log(name,age,false);
+
+	//"Joy Wahome"
+          21
+          false
+
+
+
+2.Rewrite with arrow functions
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+ask(
+"Do you agree?",
+  
+function() { alert("You agreed."); },
+  
+function() { alert("You canceled the execution."); }
+);
+
+let ask = (question,yes,no) => {
+  if (confirm(question))yes()
+  else no();
+} 
+
+  ask(
+  "Do you agree?",
+  () => {alert("You agreed"); },
+  () => {alert("You have cancelled the execution"); }
+  );
+
+	//alerts the user 
+
