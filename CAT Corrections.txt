@@ -1,0 +1,179 @@
+ECMAScript Assignment- 23 May 2019
+
+CAT Corrections
+
+class Mkulima {
+  constructor () {
+    this.farms = [];
+    this.vendors = [];
+    this.products = [];
+    this.orders = [];
+  }
+  
+  addFarm(farmId, name, farmer, phone, address) {
+    let farm = {
+      farmId: farmId,
+      name: name,
+      farmer: farmer,
+      phone: phone,
+      address: address
+    }
+    this.farms.push (farm)
+  }
+  
+  getFarm(farmId) {
+    for(var i=0; i<this.farms.length; i++) {
+      let farm = this.farms[i];
+      if (farm.farmId == farmId) {
+        return farm
+      }
+    }
+  }
+  
+  removeFarm(farmId) {
+    let farm = this.getFarm(farmId)
+    let index = this.farms.indexOf(farm);
+    this.farms.splice(index,1)
+  }
+  
+  updateFarm(farmId, name, farmer, phone, address) {
+    let farm = {
+      farmId: farmId,
+      name: name,
+      farmer: farmer,
+      phone: phone,
+      address: address
+    }
+    this.farms.push (farm)
+  }
+  
+  addVendor(vendorId, name, phone) {
+    let vendor = {
+      vendorId: vendorId,
+      name: name,
+      phone: phone
+    }
+    this.vendors.push (vendor)
+  }
+  
+  getVendor(vendorId) {
+     for(var i=0; i<this.vendors.length; i++) {
+       let vendor = this.vendors[i];
+       if (vendor.vendorId == vendorId) {
+         return vendor
+       }
+     }
+  }
+  
+  removeVendor(vendorId) {
+    let vendor = this.getVendor(vendorId)
+    let index = this.vendors.indexOf(vendor);
+    this.vendors.splice(index,1)
+  }
+  
+  updateVendor(vendorId, name, phone) {
+    let vendor = {
+      vendorId: vendorId,
+      name: name,
+      phone: phone
+    }
+    this.vendors.push (vendor)
+  }
+  
+  addProduct(productId, name, price) {
+    let product = {
+      productId: productId,
+      name: name,
+      price: price
+    }
+    this.products.push (product)
+  }
+  
+  getProduct(productId) {
+    for(var i=0; i<this.products.length; i++) {
+      let product = this.products[i];
+      if (product.productId == productId) {
+        return product
+      }
+     }
+    }
+  
+  removeProduct(productId) {
+    let product = this.getProduct(productId)
+    let index = this.products.indexOf(product);
+    this.products.splice(index,1)
+  }
+  
+  updateProduct(productId, name, phone) {
+    let product = {
+      productId: productId,
+      name: name,
+      phone: phone
+    }
+    this.products.push (product)
+  }
+  
+//   printProducts() {
+//     let product = {
+//       productId: productId,
+//       price: price
+//     }
+//     this.products.push(product)
+//   }
+  
+  calculateOrderCost (productId, quantity) {
+    for(var i=0; i<this.orders.length; i++) {
+      let order = this.orders[i];
+      if (order.productId == productId) {
+        return order
+    }
+   }
+  }
+ 
+  createOrder(productId, quantity, farmId, storeId) {
+    let order = {
+      productId: productId,
+      quantity: quantity,
+      farmId: farmId,
+      storeId: storeId
+    }
+    this.orders.push (order)
+  }
+  
+}
+
+var mkulima = new Mkulima();
+mkulima.addFarm(1,"Shamba","Jane","0700000001","Naivasha")
+mkulima.addFarm(2,"Plot","Ivy","0700000002","Nakuru")
+mkulima.removeFarm(1)
+mkulima.getFarm(1)
+mkulima.updateFarm(1,"Shamba2","Jane","0700000011","Naivasha")
+console.log(mkulima.farms)
+
+var joy = new Mkulima();
+joy.addVendor(1,"Shamba","Jane")
+joy.addVendor(2,"Plot","Ivy")
+joy.removeVendor(2)
+joy.getVendor(2)
+joy.updateVendor(1,"Shamba002","Jane")
+console.log(joy.vendors)
+
+var maina = new Mkulima();
+maina.addProduct(1,"Kiwi","KES 60")
+maina.addProduct(2,"Sukuma","KES 40")
+maina.removeProduct(1)
+maina.getProduct(2)
+maina.updateProduct(1,"Kiwi001","KES70")
+console.log(maina.products)
+
+// var tab = new Mkulima();
+// tab.printProducts("Kiwi: KES 60")
+// console.log(tab.printProducts)
+
+var glue = new Mkulima();
+glue.calculateOrderCost(2,"5 bags")
+console.log(glue.calculateOrderCost)
+
+var bottle = new Mkulima();
+bottle.createOrder(2,"2 bags",002,010)
+console.log(bottle.order)
