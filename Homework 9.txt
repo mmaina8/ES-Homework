@@ -1,0 +1,73 @@
+ECMAScript Assignment- 6 June 2019
+
+var body = document.body
+body .style.backgroundColor = "silver"
+
+var styling = document.createElement("style")
+styling.innerHTML = ".bg-color{color: green;}"
+var h1 = document.getElementById("title")
+h1.appendChild(styling)
+var titles = document.getElementById("title")
+var h1 = title.parentNode
+titles.setAttribute("class","bg-color")
+
+var body = document.body
+var paragraphs = document.getElementsByTagName("h3")
+paragraphs[0].innerHTML
+var heading = document.getElementsByTagName("p")
+body .style.textTransform = "uppercase"
+
+var list = document.createElement("li")
+list.innerHTML = "Oranges"
+var ul = document.getElementById("fruList")
+ul.appendChild(list)
+
+var list2 = document.createElement("li")
+list2.innerHTML = "Carrots"
+var ul = document.getElementById("vegList")
+ul.appendChild(list2)
+
+
+..........................................................................................
+
+Async/Await 
+
+An async function is a modification to the syntax used in writing promises.
+From my understanding, it is the 'in-between' for a promise and a request.
+
+example
+async function f() {
+  return 1;
+}
+
+f().then(alert); // 1
+
+The keyword await makes JavaScript wait until that promise settles and returns its result.
+
+example
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait till the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
