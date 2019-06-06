@@ -1,0 +1,157 @@
+CAT Makeup
+
+class AkiraChix {
+
+  constructor () {
+    this.students = []
+    this.subjects = []
+    this.marks = []
+  }
+  
+  addStudent(studentId, name, gender, email, phone, githubUsername) {
+    let student = {
+      studentId: studentId,
+      name:name,
+      gender:gender,
+      email:email,
+      phone:phone,
+      githubUsername:githubUsername
+    }
+    this.students.push(student)
+  }
+  
+  getStudent(studentId) {
+    for (var i=0; i<this.students.length; i++) {
+      let student = this.students[i];
+      if (student.studentId = studentId) {
+        return student;
+      }
+    }
+  }
+  
+  updateStudent(studentId, name, gender, email, phone, githubUsername) {
+    let student = {
+      studentId: studentId,
+      name:name,
+      gender:gender,
+      email:email,
+      phone:phone,
+      githubUsername:githubUsername
+    }
+    this.students.push(student)
+  }
+  
+  removeStudent(studentId) {
+    let student = this.getStudent(studentId)
+    let index = this.students.indexOf(student);
+    this.students.splice(index,1)
+  }
+  
+  addSubject(subjectId, name, trainer) {
+    let subject = {
+      subjectId:subjectId,
+      name:name,
+      trainer:trainer
+    }
+    this.subjects.push(subject)
+  }
+  
+  getSubject(subjectId) {
+    for (var i=0; i<this.subjects.length; i++) {
+      let subject = this.subjects[i];
+      if (subject.subjectId = subjectId) {
+        return subject;
+      }
+    }
+  }
+  
+  updateSubject(subjectId, name, trainer) {
+    let subject = {
+      subjectId:subjectId,
+      name:name,
+      trainer:trainer
+    }
+    this.subjects.push(subject)
+  }
+  
+  removeSubject(subjectId) {
+    let subject = this.getSubject(subjectId)
+    let index = this.subjects.indexOf(subject);
+    this.subjects.splice(index,1)
+  }
+  
+  addMark(studentId, subjectId, marks) {
+    let mark = {
+      studentId:studentId,
+      subjectId:subjectId,
+      marks:marks
+    }
+    this.marks.push(mark)
+  }
+  
+//   getMark(studentId,subjectId) {
+//     for (var i=0; i<this.marks.length; i++) {
+//       let mark = this.marks[i];
+//       if (mark.studentId == studentId && mark.subjectId == subjectId) {
+//         return mark;
+//       }
+//     }
+//   }
+  
+  updateMark(studentId, subjectId, marks) {
+    let mark = {
+      studentId:studentId,
+      subjectId:subjectId,
+      marks:marks
+    }
+    this.marks.push(mark)
+  }
+  
+//   removeMark(studentId, subjectId) {
+//     let mark = this.getMark(studentId,subjectId)
+//     let index = this.marks.indexOf(mark);
+//     let index1 = this.marks.indexOf(mark);
+//     this.marks.splice(index,1)
+//   }
+  
+  getTotalMarks(studentId) {
+    let mark = {
+      student:studentId
+    }
+  }
+  
+//   passMarkFilter() {
+    
+//   }
+  
+//   printStudentMarks() {
+    
+//   }
+ 
+}
+
+var akirachix = new AkiraChix ();
+akirachix.addStudent(1,"Joy Wahome","Female","joyywahome@gmail.com",0712345678,"mmaina8")
+akirachix.addStudent(2,"Mercy Rima","Female","mrima@gmail.com",0712346578,"mrima")
+akirachix.updateStudent(2,"Mercy Rima","Female","mrima2@gmail.com",0712346578,"mrima2")
+akirachix.removeStudent(1)
+console.log(akirachix.students)
+console.log(akirachix.getStudent(2))
+
+var units = new AkiraChix ();
+units.addSubject(1,"JavaScript","Antony Orenge")
+units.addSubject(2,"Python","James Mwai")
+units.updateSubject(2,"Python3","James Mwai")
+units.removeSubject(2)
+console.log(units.subjects)
+console.log(units.getSubject(1))
+
+var points = new AkiraChix ();
+points.addMark(1,1,100)
+points.addMark(2,2,99)
+points.updateMark(2,2,100)
+// points.removeMark(1,1)
+console.log(points.marks)
+//console.log(getMark(1,2))
+
+
