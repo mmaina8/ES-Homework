@@ -1,0 +1,66 @@
+HTML Code
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Greens Kiosk</title>
+</head>
+<body>
+  <h1 id="title">Welcome to Greens Kiosk</h1>
+  <p>We sell fruits and vegetables</p>
+  <h3>Fruits</h3>
+  <ul id="fruList">
+    <li>Mangoes</li>
+    <li>Bananas</li>
+    <li>Water Melons</li>
+    <input id="name" type="text" >
+    <button id="btn" onClick=fruList.append(addFruit())>Submit</button>
+  </ul>
+  <h3>Vegetables</h3>
+  <ul id="vegList">
+    <li>Onions</li>
+    <li>Tomatoes</li>
+    <li>Kales</li>
+    <input id="name" type="text" >
+    <button id="btn" onClick=vegList.append(addVegetable())>Submit</button>
+  </ul>
+</body>
+</html>
+
+
+
+
+JS Code
+
+var changeColor = () =>  {
+  var heading = document.getElementById("title");
+  
+  heading.style.color = heading.style.color === "green" ? "silver" : "green";
+}
+setInterval(changeColor,  1000);
+
+var element = document.getElementById("name")
+var list = document.createElement("li")
+function addFruit() {
+  return element.value
+}
+name.onClick = function(){
+  console.log(fruList.append(addFruit()))
+}
+list.innerHTML = addFruit()
+var ul = document.getElementById("fruList")
+ul.appendChild(list)
+
+
+
+var element = document.getElementById("name")
+var list = document.createElement("li")//
+function addVegetable() {
+  return element.value
+}
+name.onClick = function(){
+  console.log(vegList.append(addVegetable()))
+}
+list.innerHTML = addVegetable()
+var ul = document.getElementById("vegList")
+ul.appendChild(list)
