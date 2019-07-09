@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   <title>Greens Kiosk</title>
+   
+ 
+
+</head>
+
+<body>
+   <h1 id="title">Welcome to Greens Kiosk</h1>
+   <p>We sell fruits and vegetables</p>
+   <h2>Products</h2>
+   <ul id="products">
+    <script type="text/javascript">
+        fetch('http://localhost:5000/products')
+         .then(response => response.json())
+        .then(response => {
+            response.forEach(item => {
+                var list = document.getElementById('products')
+                var prodlist= document.createElement('li');
+                var items = document.createTextNode(item.name);
+                prodlist.appendChild(items);
+                list.appendChild(prodlist);
+            })
+            console.log(response)
+        })
+     
+        
+        </script><!-- Show products list from API -->
+   </ul>
+   <h3>Fruits</h3>
+   <ul id="fruList">
+    <script type="text/javascript">
+        fetch('http://localhost:5000/products/fruits')
+         .then(response => response.json())
+        .then(response => {
+            response.forEach(item => {
+                var list = document.getElementById('fruList')
+                var prodlist = document.createElement('li');
+                var items = document.createTextNode(item.name);
+                prodlist.appendChild(items);
+                list.appendChild(prodlist);
+            })
+            console.log(response)
+        }) 
+        </script><!-- Show fruits from API -->
+   </ul>
+   <h3>Vegetables</h3>
+   <ul id="vegList">
+    <script type="text/javascript">
+        fetch('http://localhost:5000/products/vegetables')
+         .then(response => response.json())
+        .then(response => {
+            response.forEach(item => {
+                var list = document.getElementById('vegList')
+                var prodlist = document.createElement('li');
+                var items = document.createTextNode(item.name);
+                prodlist.appendChild(items);
+                list.appendChild(prodlist);
+            })
+            console.log(response)
+        })
+
+        </script><!-- Show vegetables from API -->
+   </ul>
+</body>
+
+</html>
