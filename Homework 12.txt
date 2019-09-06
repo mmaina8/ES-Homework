@@ -1,0 +1,72 @@
+Week 12
+
+var title = document.getElementById("title")
+var toggleState = false;
+var toggleColor = () => {
+ toggleState = !toggleState;
+ var color = toggleState ? "green" : "silver";
+ title.style.color =color;
+}
+setInterval(toggleColor,1000);
+
+
+
+var h3s =document.getElementsByTagName("h3");
+var fruitH3 = h3s[0];
+var vegH3= h3s[1];
+
+var fruList = document.getElementById("fruList");
+var vegList = document.getElementById("vegList");
+
+var collapseState = false;
+function collapse (element) {
+  collapseState = !collapseState;
+  var style = collapseState ? "none" : "block";
+  element.style.display = style;
+  
+}
+
+fruitH3.addEventListener("click", () => collapse(fruList));
+vegH3.addEventListener("click", () => collapse(vegList));
+
+
+
+
+var inputFru = document.getElementById("inputFru");
+var btnFru = document.getElementById("btnFru");
+
+var addFruit = () => {
+  var newFruit = inputFru.value;
+  if (!newFruit) return;
+  inputFru.value = null;
+  var li = document.createElement("li");
+  var textNode = document.createTextNode(newFruit);
+  li.appendChild(textNode);
+  fruList.appendChild(li);
+}
+
+btnFru.addEventListener("click", addFruit);
+
+
+
+
+var inputVeg = document.getElementById("inputVeg");
+
+var addVeg = () => {
+ if (event.keyCode === 13) {
+ var newVeg = inputVeg.value;
+ if(!newVeg) return;
+ inputVeg.value=null;
+ var li=document.createElement("li");
+ var textNode = document.createTextNode(newVeg)
+ li.appendChild(textNode);
+ vegList.appendChild(li);
+}
+}
+
+
+inputVeg.addEventListener("keyup", addVeg);
+
+
+
+
